@@ -40,9 +40,10 @@ def check_n_queens(n):
             'positions':result})
         session.execute(row)
         session.commit()
-        return result
     except Exception as e:
         logging.info(f'Error is {e}')
+        
+    return result
     
 
 
