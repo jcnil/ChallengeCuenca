@@ -86,5 +86,5 @@ When executing this command, when passing a number of queens, the value is store
 
 ## Challenge Solution by
 
-* **José Nicolielly** - - [jcnil](https://github.com/jcnil)
+* **José Nicolielly** - - [jcnil](https://github.com/jcnil/ChallengeCuenca)
 
