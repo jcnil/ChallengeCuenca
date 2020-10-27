@@ -1,0 +1,21 @@
+FROM ubuntu:20.04
+
+WORKDIR /challenge
+
+ENV TZ=America/Mexico_City
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# Copy project's files
+COPY libs libs
+COPY test_n_queens.py .
+COPY run.py .
+COPY requirements.txt .
+COPY challenge.conf .
+
+# Install PIP and requirements project
+RUN apt update && apt -y install python3
+RUN apt -y install python3-minimal 
+RUN apt -y install python3-pip
+RUN apt -y install nano
+RUN apt -y install postgresql
+RUN pip3 install -r requirements.txt
